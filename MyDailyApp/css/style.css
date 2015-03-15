@@ -1,0 +1,164 @@
+/*Langing page styling BEGIN*/
+body{
+	width: 100%;
+	margin: 0 auto;
+	padding: 0;
+	background-color: #451404;
+}
+#container{
+	margin: 0 auto;
+	padding: 0;
+}
+.landing{
+	width: 80%;
+	margin: 0 auto;
+	font-family: 'Source Sans Pro', sans-serif;
+	color: #ede8e4;
+}
+h1{
+	font-family: 'Great Vibes', cursive;
+	font-size: 80px;
+	text-align: center;
+	padding-top: 100px;
+	color: #9e918c;
+}
+h2{
+	text-align: center;
+	padding-bottom: 60px;
+	font-weight: lighter;
+}
+form{
+	text-align: center;
+	padding-bottom: 85px;
+}
+input{
+	display: inline-block;
+	padding: 10px;
+	margin: 0 0 10px 10px;
+}
+form a{
+	display: inline-block;
+	color: #9e918c;
+	vertical-align: text-bottom;
+}
+.passSet{
+	padding-left: 10px;
+	font-size: 12px;
+}
+#signUp a{
+	display: inline-block;
+	color: #e86f41;
+}
+.button{
+	padding: 6px 20px;
+	background-color: #e86f41;
+	color: #ede8e4;
+	border: 1px solid #9e918c;
+}
+footer{
+	margin: 0 auto;
+	padding: 0;
+}
+footer p{
+	padding: 80px;
+	text-align: center;
+	background-color: #a08d70;
+	font-family: 'Source Sans Pro', sans-serif;
+	color: #ede8e4;
+	margin: 0 auto;
+}
+/*Landing page styling END*/
+
+/*Success page styling START*/
+.success{
+	text-align: center;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: lighter;
+	color: #ede8e4;
+	padding: 220px 0;
+}
+.success a{
+	color: #e86f41;
+}
+/*Success page styling END*/
+
+/*Register page styling START*/
+.tagline{
+	position: absolute;
+	top: 0;
+	left: 200px;
+}
+.regHeading{
+	font-family: 'Source Sans Pro', sans-serif;
+	color: #9e918c;
+	padding: 80px 0 40px 0;
+	background-color: #ede8e4;
+	width: 50%;
+	margin: 0 auto;
+}
+.regHeading h2{
+	padding-bottom: 20px;
+}
+.regHeading a{
+	background-color: #e86f41;
+	padding: 5px 10px;
+	color: #ede8e4;
+	text-decoration: none;
+	position: absolute;
+	top: 0;
+	left: 1045px;
+}
+.regHeading p{
+	padding-left: 175px;
+	color: #ab221f;
+}
+.regHeading form{
+	text-align: right;
+	padding: 0 190px 20px 0; 
+}
+.regHeading input{
+	width: 250px;
+}
+#regButn{
+	margin-top: 5px;
+	width: 75px;
+}
+/*Register page styling END*/
+
+/*User home page styling START*/
+#logo{
+	font-family: 'Great Vibes', cursive;
+}
+.logout{
+	font-family: 'Source Sans Pro', sans-serif;
+	background-color: #e86f41;
+	padding: 5px 10px;
+	color: #ede8e4;
+	text-decoration: none;
+	position: absolute;
+	top: 10px;
+	left: 1355px;
+}
+.greeting{
+	font-family: 'Source Sans Pro', sans-serif;
+	color: #ede8e4;
+}
+.quote{
+	font-family: 'Source Sans Pro', sans-serif;
+	text-align: center;
+	background-color: #e86f41;
+	padding-top: 5px;
+	margin-bottom: 100px;  
+}
+.quote h3{
+	color: #000;
+}
+.quote p{
+	background-color: #ede8e4;
+	color: #451404;
+	padding: 10px;
+}
+/*User home page styling END*/
+
+
+
