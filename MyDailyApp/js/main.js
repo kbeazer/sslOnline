@@ -17,8 +17,20 @@ $(document).ready(function(){
 	}, function(){
 		$(this).css('color', '#9e918c');
 	})
+
+	$('.favLogo').hover(function(){
+		$(this).attr('src', '/images/favorites2.png');
+	}, function(){
+		$(this).attr('src', '/images/favorites.png');
+	})
+
+	$('.comFix').hover(function(){
+		$(this).attr('src', '/images/comment2.png');
+	}, function(){
+		$(this).attr('src', '/images/comment.png');
+	})
   
-  	$('.regHeading a').hover(function(){
+  	$('.regHeading a, .userUpdate a').hover(function(){
 		$(this).css('backgroundColor', '#9e918c');
 	}, function(){
 		$(this).css('backgroundColor', '#e86f41');
@@ -29,4 +41,9 @@ $(document).ready(function(){
 	}, function(){
 		$(this).css('backgroundColor', '#e86f41');
 	})
+
+	$( "#comToggle" ).click(function(e) {
+		e.preventDefault();
+  		$( ".comHide" ).slideToggle( "slow" );
+	});
 })

@@ -24,9 +24,7 @@ class Create_user extends CI_Controller {
 
 			$this->load->view('templates/header', $data);
 			$this->load->view('pages/register', $data);
-			$this->load->view('templates/footer');
-
-			
+			$this->load->view('templates/footer');	
 		}
 		else
 		{

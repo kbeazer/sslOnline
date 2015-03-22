@@ -3,6 +3,7 @@
 	<div class="landing">
 		<h1>My Daily Inspiration</h1>
 		<h2>Live your life one day at a time.</h2>
+		<img src="/images/sunset.jpg" class="imageFix">
 
 		<?php echo validation_errors(); ?>
 

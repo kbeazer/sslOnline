@@ -15,21 +15,26 @@ body{
 	font-family: 'Source Sans Pro', sans-serif;
 	color: #ede8e4;
 }
+.imageFix{
+	max-width: 60%;
+	padding-left: 230px;
+	margin-bottom: 20px;
+}
 h1{
 	font-family: 'Great Vibes', cursive;
 	font-size: 80px;
 	text-align: center;
-	padding-top: 100px;
+	padding-top: 60px;
 	color: #9e918c;
 }
 h2{
 	text-align: center;
-	padding-bottom: 60px;
+	padding-bottom: 20px;
 	font-weight: lighter;
 }
 form{
 	text-align: center;
-	padding-bottom: 85px;
+	padding-bottom: 20px;
 }
 input{
 	display: inline-block;
@@ -126,8 +131,14 @@ footer p{
 /*Register page styling END*/
 
 /*User home page styling START*/
+.comHide{
+	display: none;
+}
 #logo{
 	font-family: 'Great Vibes', cursive;
+}
+.comFix{
+	max-width: 2.5%;
 }
 .logout{
 	font-family: 'Source Sans Pro', sans-serif;
@@ -141,24 +152,109 @@ footer p{
 }
 .greeting{
 	font-family: 'Source Sans Pro', sans-serif;
-	color: #ede8e4;
+	color: #9e918c;
+	text-align: left;
+	padding: 0 0 0 140px;
+}
+.greeting span{
+	color: #ede8e4; 
+}
+.dailyQuote{
+	margin: 0 0 10px 0;
+	background-color: #ede8e4;
+	color: #451404;
+	font-size: 20px;
+	padding: 40px 0;
 }
 .quote{
 	font-family: 'Source Sans Pro', sans-serif;
 	text-align: center;
-	background-color: #e86f41;
-	padding-top: 5px;
-	margin-bottom: 100px;  
+	background-color: #ede8e4;
+	margin: 0 0 40px 140px; 
+	width: 80%; 
 }
 .quote h3{
-	color: #000;
-}
-.quote p{
-	background-color: #ede8e4;
 	color: #451404;
+	background-color: #a08d70;
+	padding: 10px 0;
+	margin-bottom: 0;
+}
+.dailyComments{
+	text-align: left;
+	padding-left: 20px;
+	border-bottom: 1px solid #451404;
+	width: 60%;
+	margin-left: 220px;
+	font-size: 14px;
+}
+.commentBox{
+	width: 50%;
+}
+.spotlight{
+	width: 80%;
+	background-color: #ede8e4;
+	margin: 0 0 0 140px;
+}
+.spotBox{
+	width: 33.1%;
+	display: inline-block;
+	/*background-color: #ede8e4;*/
+
+	padding: 0;
+	margin-bottom: 40px;
+}
+.spotBox a{
+	font-family: 'Source Sans Pro', sans-serif;
+	display: block;
+	text-decoration: none;
 	padding: 10px;
 }
+.spotHeading{
+	background-color: #a08d70;
+	font-family: 'Source Sans Pro', sans-serif;
+	text-align: center; 
+	margin-top: 0;
+	padding: 10px 0;
+}
+.favLogo{
+	width: 2.5%;
+	float: left;
+	padding-left: 10px;
+}
+
 /*User home page styling END*/
 
-
+/*User update page styling START*/
+.pageHeading{
+	text-align: center;
+}
+.userUpdate{
+	font-family: 'Source Sans Pro', sans-serif;
+	color: #9e918c;
+	padding: 80px 0 40px 0;
+	background-color: #ede8e4;
+	width: 50%;
+	margin: 0 auto;
+}
+.userUpdate form{
+	text-align: right;
+	padding: 0 200px 20px 0; 
+}
+.userUpdate input{
+	width: 250px;
+}
+.lineUp{
+	padding-left: 200px;
+	color: #451404;
+}
+.userUpdate a{
+	background-color: #e86f41;
+	padding: 5px 10px;
+	color: #ede8e4;
+	text-decoration: none;
+	position: absolute;
+	top: 0;
+	left: 1045px;
+}
+/*User update page styling END*/
 

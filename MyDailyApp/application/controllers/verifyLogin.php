@@ -2,13 +2,14 @@
  
 class VerifyLogin extends CI_Controller {
  
-  function __construct()
+  public function __construct()
   {
     parent::__construct();
     $this->load->model('user_model');
+    $this->load->library('session');
   }
  
-  function index()
+  public function index()
   {
     //This method will have the credentials validation
     $this->load->library('form_validation');
@@ -25,17 +26,11 @@ class VerifyLogin extends CI_Controller {
     }
     else
     {
-     //Go to private area
-      $data['username'] = ucfirst($this->input->post('userName'));
-      $data['title'] = 'User Home';
-
-      $this->load->view('templates/header', $data);
-      $this->load->view('pages/userMain', $data);
-      $this->load->view('templates/footer');
+      $this->load_page();
     }
   }
  
-  function check_database($password)
+  public function check_database($password)
   {
     //Field validation succeeded.  Validate against database
     $username = $this->input->post('userName');
@@ -51,10 +46,10 @@ class VerifyLogin extends CI_Controller {
       {
         $sess_array = array(
           'userId' => $row -> userId,
-          'userName' => $row -> userName
+          'userName' => $row -> userName,
         );
 
-        $this->session->set_userdata('logged_in', $sess_array);
+        $this->session->set_userdata($sess_array);
       }
       return TRUE;
     }
@@ -64,4 +59,20 @@ class VerifyLogin extends CI_Controller {
       return false;
     }
   }
+
+  public function load_page()
+  {
+    $data['username'] = ucfirst($this->session->userdata('userName'));
+    $data['title'] = 'User Home';
+    $data['quote'] = $this->user_model->get_quote();
+    $data['quoteId'] = $this->user_model->get_quoteId($data['quote']);
+    $data['comment'] = $this->user_model->get_comment($data['quoteId']);
+
+    $this->load->view('templates/header', $data);
+    $this->load->view('pages/userMain', $data);
+    $this->load->view('pages/quote_view', $data);
+    $this->load->view('pages/spotlight_view', $data);
+    $this->load->view('templates/footer');
+  }
+
 }
