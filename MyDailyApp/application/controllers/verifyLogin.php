@@ -46,7 +46,7 @@ class VerifyLogin extends CI_Controller {
       {
         $sess_array = array(
           'userId' => $row -> userId,
-          'userName' => $row -> userName,
+          'userName' => $row -> userName
         );
 
         $this->session->set_userdata($sess_array);
@@ -62,9 +62,13 @@ class VerifyLogin extends CI_Controller {
 
   public function load_page()
   {
+    $this->session->set_userdata('quote', $this->user_model->get_quote());
+
+    $data['fav_view'] = $this->user_model->select_favorite();
     $data['username'] = ucfirst($this->session->userdata('userName'));
     $data['title'] = 'User Home';
-    $data['quote'] = $this->user_model->get_quote();
+    $data['quote'] = ucfirst($this->session->userdata('quote'));
+    $data['userQuote'] = $this->user_model->select_quote($this->session->userdata('userId'));
     $data['quoteId'] = $this->user_model->get_quoteId($data['quote']);
     $data['comment'] = $this->user_model->get_comment($data['quoteId']);
 

@@ -4,12 +4,59 @@ class User_model extends CI_Model {
 	public function __construct()
 	{
 		$this->load->database();
+		$this->load->library('session');
 	}
 
 	public function get_users()
 	{	
 		$query = $this->db->get('users');
 		return $query->result_array();
+	}
+
+	public function add_favorite($quote)
+	{
+		$data = array(
+			'userId' => $this->session->userdata('userId'),
+			'favorite' => $quote
+		);
+
+		$this->db->insert('favorites', $data);
+	}
+
+	public function select_favorite()
+	{
+		$this-> db -> select('favorite');
+		$this-> db -> from('favorites');
+		$this-> db -> where('userId', $this->session->userdata('userId'));
+
+		$query = $this-> db -> get();
+
+		$result = array();
+
+		foreach ($query->result() as $row)
+		{
+			$result[] = $row->favorite;
+		}
+
+		return $result;
+	}
+
+	public function select_quote($userId)
+	{
+		$this-> db -> select('quote');
+		$this-> db -> from('quotes');
+		$this-> db -> where('quoteId', $userId);
+
+		$query = $this-> db -> get();
+
+		$result = array();
+
+		foreach ($query->result() as $row)
+		{
+			$result[] = $row->quote;
+		}
+
+		return $result;
 	}
 
 	public function set_user()
@@ -83,6 +130,7 @@ class User_model extends CI_Model {
 
 		$query = $this -> db -> get();
 
+		$result = '';
 		foreach ($query->result() as $row)
 		{
 			$result = $row->quoteId;
@@ -95,9 +143,7 @@ class User_model extends CI_Model {
 	{
 		$this -> db -> select('comment');
 		$this -> db -> from('comments');
-		$this -> db -> join('users', 'users.comId = comments.comId', 'left');
-		$this -> db -> join('quotes', 'quotes.quoteId = users.quoteId', 'left');
-		// $this -> db -> where('quotes.linkId', $quoteId);
+		$this -> db -> where('comId', $quoteId);
 
 		$query = $this -> db -> get();
 
@@ -146,6 +192,31 @@ class User_model extends CI_Model {
 		}
 
 		return $result_final;
+	}
+
+	public function set_quote($userId, $quote)
+	{
+		$data = array(
+			'quoteId' => $userId,
+			'quote' => $quote
+		);
+
+		$this -> db -> insert('quotes', $data);	
+		
+		$this -> db -> select('quote');
+		$this -> db -> from('quotes');
+		$this -> db -> where('quoteId', $userId);
+
+		$query = $this -> db -> get();
+
+		$result = array();
+
+		foreach ($query->result() as $row) 
+		{
+			$result[] = $row->quote;
+		}
+
+		return $result;
 	}
 
 	public function get_details($username)

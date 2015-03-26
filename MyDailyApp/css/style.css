@@ -131,8 +131,17 @@ footer p{
 /*Register page styling END*/
 
 /*User home page styling START*/
-.comHide{
+.comHide, .quoteHide{
 	display: none;
+}
+.quoteHide{
+	padding-top: 50px;
+}
+.quoteToggle{
+	background-color: #e86f41;
+	text-align: center;
+	color: #ede8e4;
+	font-size: 12px;
 }
 #logo{
 	font-family: 'Great Vibes', cursive;
@@ -170,7 +179,7 @@ footer p{
 	font-family: 'Source Sans Pro', sans-serif;
 	text-align: center;
 	background-color: #ede8e4;
-	margin: 0 0 40px 140px; 
+	margin: 0 0 30px 140px; 
 	width: 80%; 
 }
 .quote h3{
@@ -187,8 +196,18 @@ footer p{
 	margin-left: 220px;
 	font-size: 14px;
 }
+.dailyComments em{
+	color: #e86f41;
+	float:  right; 
+}
 .commentBox{
 	width: 50%;
+}
+.tableBack{
+	background-color: #ede8e4;
+	width: 80%;
+	text-align: center;
+	margin-left: 140px;
 }
 .spotlight{
 	width: 80%;
@@ -196,9 +215,9 @@ footer p{
 	margin: 0 0 0 140px;
 }
 .spotBox{
-	width: 33.1%;
+	width: 33%;
 	display: inline-block;
-	/*background-color: #ede8e4;*/
+	background-color: #ede8e4;
 
 	padding: 0;
 	margin-bottom: 40px;
@@ -211,17 +230,27 @@ footer p{
 }
 .spotHeading{
 	background-color: #a08d70;
+	color: #451404;
 	font-family: 'Source Sans Pro', sans-serif;
 	text-align: center; 
 	margin-top: 0;
 	padding: 10px 0;
 }
+.favorites, .quotes{
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 12px;
+	padding: 10px;
+}
 .favLogo{
 	width: 2.5%;
 	float: left;
-	padding-left: 10px;
+	padding-left: 20px;
 }
 
+#comToggle{
+	text-decoration: none;
+	vertical-align: text-bottom;
+}
 /*User home page styling END*/
 
 /*User update page styling START*/
@@ -255,6 +284,13 @@ footer p{
 	position: absolute;
 	top: 0;
 	left: 1045px;
+}
+.home{
+	font-family: 'Source Sans Pro', sans-serif;
+	text-decoration: none;
+	position: absolute;
+	left: 670px;
+	top: 300px;
 }
 /*User update page styling END*/
 

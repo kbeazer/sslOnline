@@ -6,6 +6,12 @@ $(document).ready(function(){
 		$(this).css('backgroundColor', '#e86f41');
 	})
 
+	$('.quoteToggle').hover(function(){
+		$(this).css('backgroundColor', '#9e918c');
+	}, function(){
+		$(this).css('backgroundColor', '#e86f41');
+	})
+
 	$('#signUp a').hover(function(){
 		$(this).css('color', '#9e918c');
 	}, function(){
@@ -45,5 +51,10 @@ $(document).ready(function(){
 	$( "#comToggle" ).click(function(e) {
 		e.preventDefault();
   		$( ".comHide" ).slideToggle( "slow" );
+	});
+
+	$( ".quoteToggle" ).click(function(e) {
+		e.preventDefault();
+  		$( ".quoteHide" ).slideToggle( "slow" );
 	});
 })
